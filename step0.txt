@@ -1,0 +1,10 @@
+Notes on part 1 of Angular tutorial
+
+Note on once app is bootstrapped with angular:
+
+-will then wait for incoming browser events (such as mouse click, key press or incoming HTTP response) that might change the model. 
+
+- Once such an event occurs, Angular detects if it caused any model changes and if changes are found, 
+Angular will reflect them in the view by updating all of the affected bindings.
+
+Currently: The template contains just one directive and one static binding, and our model is empty
