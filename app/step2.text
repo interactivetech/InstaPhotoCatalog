@@ -1,0 +1,30 @@
+View and Template:
+
+view: "ng-app=phonecatApp" projection of model through HTML templaye
+
+    -when changes, angular refreshes appropriate binding points,
+    which updates the view
+
+    Note: PhoneList Ctrl is contained in
+    the module defined in ng-app
+
+
+    in the hardcoded list tag, added an:
+
+    ngRepeat directive: "phone in phones", a angular repeater
+    directive, tells angular to create a li> element for eacgh
+    phone in list using <li> tag as template
+
+    Angular expressions ({{phone.name}}, {{phone.snippet}})
+    will be replaced by the value of expressions
+
+    Also, added a directive (ng-controller) which attaches the controller
+    PhoneListCtrl controller to <body> tag
+
+    the angular expressions declared denote data bondings
+    ->which refer to application model that us set up on PhoneListController
+
+    TO DO:
+    Model and Controller (1)
+    Tests (2)
+    Experiments
