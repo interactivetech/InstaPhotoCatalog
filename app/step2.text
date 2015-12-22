@@ -1,11 +1,11 @@
 View and Template:
 
-view: "ng-app=phonecatApp" projection of model through HTML templaye
+view: "ng-app=InstaCatalogApp" projection of model through HTML templaye
 
     -when changes, angular refreshes appropriate binding points,
     which updates the view
 
-    Note: PhoneList Ctrl is contained in
+    Note: InstagramListCtrl is contained in
     the module defined in ng-app
 
 
@@ -24,7 +24,44 @@ view: "ng-app=phonecatApp" projection of model through HTML templaye
     the angular expressions declared denote data bondings
     ->which refer to application model that us set up on PhoneListController
 
+    
+    Model and Controller:
+    
+    the data model is instantiated in the InstagramListCtrl 
+    controller is a constructor function that takes a $scope parameter
+    
+    look in the app.js file for more notes on Model and Controller
+    
+    note: ng-app directive (on the <html> tag)  specifies the InstaCatalogApp module 
+    name as the module to load when bootstrapping the Angular application.
+    
+    controller provides context for data model, establishes data-binding between the model abd view
+    
+    we link the html to the controller using the directive ngDirective
+    
+    InstagramListCtrl controller attaches the data to $scope that was injected into our
+    controller functoion
+    
+    $scope: prototypical descendant of the scope that was created when the app was defined
+    
+    controller scope accessible to all bindings localed where was defined in the html
+    i.e. within the <body> tag
+    
+    Scope:
+    angular uses scopes to keep models and views seperate but in sync
+    
+    note: $scope keeps info contained in template, data model, and controller in sync
+    
+    any changes occur in view will update in model, and any change in model will update view
+    
+    
+    
+    
     TO DO:
-    Model and Controller (1)
-    Tests (2)
+     Tests (2)
+     
     Experiments
+    
+    
+   
+    
