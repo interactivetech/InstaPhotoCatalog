@@ -51,13 +51,19 @@ If Angular finds the directive, it will bootstrap the application with...
 
 	<!-- Add static html  to illustrate how can be turned into an angular template,
 	which will allow to display the same set of data and any data dynamically-->
-
+		
 	<ul>
+		<li>Number of pics: {{pics.length}}</li>
 		<li ng-repeat="pic in pics">
 			<span>{{pic.name}}</span>
 			<p>{{pic.description}}</p>
 		</li>
 	</ul>
+	
+	<table>
+		<tr><th ng-repeat =" j in ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']">{{j}}</th></tr>
+		<tr ng-repeat =" i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i}}</td><td>{{i+1}}</td><td>{{i+2}}</td></tr>
+	</table>
 
 </body>
 

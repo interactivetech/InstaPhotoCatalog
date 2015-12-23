@@ -60,8 +60,16 @@ view: "ng-app=InstaCatalogApp" projection of model through HTML templaye
     TO DO:
      Tests (2)
      
-    Experiments
-    
-    
-   
-    
+     Writing and Running Tests:
+     
+     gular developers prefer the syntax of Jasmine's Behavior-driven Development
+      (BDD) framework when writing test
+      
+      *can learn about Jasmine on the Jasmine home page and at the Jasmine docs.
+      
+      run unit tests using Karma
+      
+      To run the tests, and then watch the files for changes: npm test.
+     
+     
+   Would like TO DO: complete testing section by actual testing
