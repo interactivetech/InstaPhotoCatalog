@@ -31,7 +31,10 @@ If Angular finds the directive, it will bootstrap the application with...
 	<!-- Need angular -->	<script type="text/javascript" src="js/app.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular.min.js"></script>
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-rc.0/angular-resource.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.min.js"></script>
+
+
 	<!-- Need angular -->	<script type="text/javascript" src="js/controllers.js"></script>
 
 </head>
@@ -51,12 +54,14 @@ If Angular finds the directive, it will bootstrap the application with...
 
 	<!-- Add static html  to illustrate how can be turned into an angular template,
 	which will allow to display the same set of data and any data dynamically-->
-		
+
+	<input ng-model="query">
 	<ul>
 		<li>Number of pics: {{pics.length}}</li>
-		<li ng-repeat="pic in pics">
-			<span>{{pic.name}}</span>
-			<p>{{pic.description}}</p>
+		<li ng-repeat="pic in pics | filter:query">
+			<span>{{pic.caption.text}}</span>
+			<p>{{pic.likes.count}}</p>
+			<img src="{{pic.images.low_resolution.url}}">
 		</li>
 	</ul>
 	

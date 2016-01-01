@@ -1,0 +1,23 @@
+Goal: add full text search
+     end-to-end text, stayig with the app, keeps an eye on iy, and quickly detects regressions
+
+     - with the <input> tag: angular will bind the name of the input box (query)
+       to a variable of the name name in the data model and keeps the two in sync
+
+     - the data that the user types into the input box is immediately available as a filter input in the list repeater
+     (... filter: query), when changes to the data model cause the repeater's input to change, the repeater effeciently
+     updates the DOM to reflect the current state of the model
+
+     filter function uses the query to create a new array that contains only those records that match the query
+     value to create a new array that contains only those records that match the query
+
+     ngRepeat automatically updates the view in response to the charging numbers of phones returned by the "filter" filter
+     The process is completely transparent to the developer
+
+
+
+
+     TO DO:
+     LEARN Filter in MORE DETAIL
+     Complete TEST Section
+     Complete Experiments Section
