@@ -20,10 +20,10 @@ If Angular finds the directive, it will bootstrap the application with...
 	 2)  injector will then create the root scope that will become the context for the model of our application.
 	 3) Angular will then "compile" the DOM starting at the ngApp root element
 	 	- processing any directives and bindings found along the way. -->
-<html lang="en" ng-app="InstaCatalogApp">
+<html lang="en" ng-app="InstaCatalogApp" ng-controller="InstagramListCtrl" >
 <head>
 	<meta charset="utf-8">
-	<title>InstaCatalog</title>
+	<title ng-bind-template="InstaCatalog {{query}}">InstaCatalog</title>
 	
 	<!-- Need bootstrap -->	<link rel="stylesheet" type="text/css" href="css/app.css">
 
@@ -39,7 +39,7 @@ If Angular finds the directive, it will bootstrap the application with...
 
 </head>
 
-<body ng-controller="InstagramListCtrl" >
+<body >
 	<!-- snippet is an Angular expressin (anything inside {{}} and ) displays two core features of Angular templating capabilities:
 	
 	1) binding, denotd by curly brackets {{}}
@@ -56,9 +56,12 @@ If Angular finds the directive, it will bootstrap the application with...
 	which will allow to display the same set of data and any data dynamically-->
 
 	<input ng-model="query">
+	<!-- Experiment, present current value -->
+	<span>{{query}}</span>
 	<ul>
 		<li>Number of pics: {{pics.length}}</li>
-		<li ng-repeat="pic in pics | filter:query">
+		<!-- Currently can search number of likes-->
+		<li ng-repeat="pic in pics | filter:{likes: {count: query}}:strict">
 			<span>{{pic.caption.text}}</span>
 			<p>{{pic.likes.count}}</p>
 			<img src="{{pic.images.low_resolution.url}}">
